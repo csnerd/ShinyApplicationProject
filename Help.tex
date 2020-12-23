@@ -1,0 +1,150 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Help},
+  pdfauthor={Mohamed},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\title{Help}
+\author{Mohamed}
+\date{23/12/2020}
+
+\begin{document}
+\maketitle
+
+\hypertarget{introduction}{%
+\subsection{Introduction}\label{introduction}}
+
+This presentation is part of the Developing Data Products Coursera.org
+course project submission.
+
+It is an R Presentation generated with RStudio.
+
+The Shiny application pitched by this presentation is at
+\url{https://halici.shinyapps.io/Gapminder-Data-Visualization-using-Shiny-and-Plotly/}
+
+The Shiny app source code is available at
+\url{https://github.com/nihathalici/Developing-Data-Products-course--Assignment-Week-4-Shiny-Application-and-Reproducible-Pitch/tree/master/Shiny}
+
+\hypertarget{application-overview}{%
+\subsection{Application Overview}\label{application-overview}}
+
+\begin{itemize}
+\tightlist
+\item
+  The application is written in Shiny which is a web application
+  framework for R
+\item
+  The source code consists of two files: server.R and ui.R
+\item
+  server.R includes the the server logic of a Shiny web application
+\item
+  ui.R includes the the user-interface definition, which uses the
+  sidebarLayout template
+\item
+  The application is hosted on Rstudio's shiny server in the cloud
+  (Shinyapps.io)
+\end{itemize}
+
+\hypertarget{how-it-works---i-the-application-contains-left-panel}{%
+\subsection{How it works? - I \textbar{} The Application contains: Left
+Panel}\label{how-it-works---i-the-application-contains-left-panel}}
+
+\begin{itemize}
+\tightlist
+\item
+  Label the main titel using a textInput
+\item
+  Change/determine the size of the plot points using a numericInput
+\item
+  Add a line of best fit using a checkboxInput
+\item
+  Change/determine the color of the plot points using a colourInput
+\item
+  Select data options using selectInput and sliderInput
+\item
+  download filtered data using a downloadButton
+\end{itemize}
+
+\hypertarget{how-it-works---ii-the-application-contains-main-panel}{%
+\subsection{How it works? - II \textbar{} The Application contains: Main
+Panel}\label{how-it-works---ii-the-application-contains-main-panel}}
+
+There are two tabs in main panel as below:
+
+\begin{itemize}
+\tightlist
+\item
+  Plot: This displays plot for corresponding dataframe
+\item
+  Table: This displays a searchable-interactive Table for corresponding
+  dataframe
+\end{itemize}
+
+\includegraphics{gapminder_using_shiny_1.png}
+
+\hypertarget{ready-to-give-it-a-try}{%
+\subsection{Ready to give it a try?}\label{ready-to-give-it-a-try}}
+
+Use the Shiny app at
+\url{https://halici.shinyapps.io/Gapminder-Data-Visualization-using-Shiny-and-Plotly/}
+
+Get the app source code at
+\url{https://github.com/nihathalici/Developing-Data-Products-course--Assignment-Week-4-Shiny-Application-and-Reproducible-Pitch}
+
+\end{document}
